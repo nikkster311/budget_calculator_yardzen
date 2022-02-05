@@ -1,11 +1,13 @@
 import React from 'react';
-// import firebase from 'firebase';
 
 function Budget() {
     return (
-        <div>
-            <h1>What is your budget for this projcet?</h1>
-        </div>
+        <form>
+            <div className="form-control">
+                <label>What is your budget for this project?</label>
+                <span className="currencyInput">$ <input type='text' placeholder="Enter your budget" /></span>
+            </div>
+        </form>
     )
 }
 

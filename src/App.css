@@ -7,3 +7,26 @@
 body {
   background: darkgoldenrod;
 }
+
+/* app */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: aliceblue;
+}
+
+/* budget component*/
+.currencyInput {
+  border: 1px inset #ccc;
+  background: white;
+  display: inline-block;
+}
+.currencyInput input {
+  border: 0;
+}
