@@ -1,0 +1,37 @@
+[{
+    "type": "patio",
+    "name": "chair",
+    "lowPrice": 4000,
+    "highPrice": 8000
+},{
+    "type": "patio",
+    "name": "table",
+    "lowPrice": 10000,
+    "highPrice": 50000
+},{
+    "type": "patio",
+    "name": "awning cover",
+    "lowPrice": 20000,
+    "highPrice": 80000
+},{
+    "type": "feature",
+    "name": "deck",
+    "lowPrice": 50000,
+    "highPrice": 300000
+},{
+    "type": "feature",
+    "name": "gazebo",
+    "lowPrice": 40000,
+    "highPrice": 150000
+},{
+    "type": "feature",
+    "name": "stone walkway",
+    "lowPrice": 30000,
+    "highPrice": 80000
+},{
+    "type": "feature",
+    "name": "fountain",
+    "lowPrice": 20000,
+    "highPrice": 200000
+}
+]
