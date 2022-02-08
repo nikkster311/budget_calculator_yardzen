@@ -4,13 +4,10 @@ import { scryRenderedComponentsWithType } from 'react-dom/cjs/react-dom-test-uti
 import { getFirestore } from 'firebase/firestore'
 
 
-function ItemsList({ budget }) {
+function ItemsList({ handleCheckboxChange, price, currencyFormat }) {
 
     // this grabs the items from a custom json file (see comment below)
     const [items, setItems] = useState([])
-
-    // set the price of all items user has selected
-    const [price, setPrice] = useState(0)
 
     // I could not get firestore connected, so I created mock data in a json file
     // here is how we grab those items and set them to the hooks onmount
@@ -35,26 +32,11 @@ function ItemsList({ budget }) {
       },[])
 
 
-    // formatting our json - numbers to currency in USD
-    function currencyFormat(num) {
-      return '$' + (num/100).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-    }
-
      // formatting our json - capitalize item name
      function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
-    // when user selects an item, add cost to their total cost
-    // we will use this to compare it to the budget they set for themselves
-    function handleCheckboxChange(event) {
-        if (event.target.checked) {
-            setPrice(prevPrice => prevPrice + parseFloat(event.target.value))
-        } else {
-            setPrice(prevPrice => prevPrice - parseFloat(event.target.value))
-        }
-    };
-    
 
     // -------- I tried using this to grab items from the firestore db but could not get it to work
 
@@ -85,7 +67,7 @@ function ItemsList({ budget }) {
                       id={`low-${item.name}`}
                       name={`low-${item.name}`}
                       value={item.lowPrice}
-                      onChange={ handleCheckboxChange} />
+                      onChange={e => handleCheckboxChange(e.target.value, e.target.checked)} />
                         {currencyFormat(item.lowPrice)}
                       </td>
 
@@ -93,7 +75,7 @@ function ItemsList({ budget }) {
                       id={`high-${item.name}`}
                       name={`high-${item.name}`}
                       value={item.highPrice}
-                      onChange={ handleCheckboxChange} />
+                      onChange={e => handleCheckboxChange(e.target.value, e.target.checked)} />
                         {currencyFormat(item.highPrice)}
                       </td>
                     </tr>)

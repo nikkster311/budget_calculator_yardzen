@@ -30,3 +30,28 @@ body {
 .currencyInput input {
   border: 0;
 }
+
+
+/* budget bar component */
+.budget-bar__wrapper {
+  height: 20px;
+  width: 100%;
+  background-color: #e0e0de;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+
+.budget-bar-total {
+  height: 100%;
+  background-color: #333;
+  border-radius: inherit;
+  text-align: right;
+  transition: width 1s ease-in-out;
+  }
+
+.budget-bar-progress  {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}
