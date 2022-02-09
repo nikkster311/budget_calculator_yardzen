@@ -50,3 +50,5 @@ In a different setting **I would have asked teammates/team leads exactly what th
     -To make sure that the user really did want to choose both the low-priced option and the high-priced option (if they checked both boxes)
     -Test the budget bar to make sure it was always correct
     -Test the budget and total cost prices to make sure they are always accurate
+
+- I did not put a lot of effort into the CSS of this project. Normally I try very hard to make sure my work is responsive and looks very good, however I wanted to focus more on the functionality of this code opposed to how it looks.
