@@ -2,9 +2,13 @@
 
 ## Thought process
 While building this calculator, my main goals were to:
+
 *-build excellent UI design*
-*-use of modular, reusable components*
+
+*-use modular, reusable components*
+
 *-comment on my code explaining my thought process and choices*
+
 
 I started by creating my React app and trying to connect to Firebase. Since I had not using Firebase before, this is what I was the most concerned about. After lots of Google-ing to see how other people had connected to their Firebase, I decided that I must be struggling because I was unable to view the databse myself. (This is usually something that helps me a lot as I am a very visual learner.)
 
