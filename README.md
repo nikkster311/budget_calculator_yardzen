@@ -1,6 +1,6 @@
 ### Yardzen Budget Calculator
 
-##Thought process
+## Thought process
 While building this calculator, my main goals were to:
 *-build excellent UI design*
 *-use of modular, reusable components*
@@ -32,7 +32,7 @@ I started by creating my React app and trying to connect to Firebase. Since I ha
 
 
 
-##What I would have done differently or improved on:
+## What I would have done differently or improved on:
 
 - The task asked to give an estimated price **range** of the items selected, however I just allowed users to choose between low and high price. While thinking about this and planning my code, I wasn't entirely sure how this would look (especially since I was unable to accses the database), so I went with checkboxes of low and high prices.
 In a different setting **I would have asked teammates/team leads exactly what they wanted regarding this aspect of the calculator** *(can the user choose from every item available? Should there be a scale? Should the calculator show two numbers: the sum of all lowest prices of selected items and the sum of all highest prices of selected items?)*
