@@ -4,7 +4,7 @@ import { scryRenderedComponentsWithType } from 'react-dom/cjs/react-dom-test-uti
 import { getFirestore } from 'firebase/firestore'
 
 
-function ItemsList({ handleCheckboxChange, price, currencyFormat }) {
+function ItemsList({ handleCheckboxChange, currencyFormat, budgetBool }) {
 
     // this grabs the items from a custom json file (see comment below)
     const [items, setItems] = useState([])
@@ -48,9 +48,9 @@ function ItemsList({ handleCheckboxChange, price, currencyFormat }) {
     //   }
 
     return (
-        <div>
-            <h1>Items List</h1>
-            <table className="items-list">
+        <div className="items-list__wrapper">
+            <h1>Yardzen Catalog</h1>
+            <table className={'items-list disable-checkboxes--' + !budgetBool}>
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
@@ -67,6 +67,7 @@ function ItemsList({ handleCheckboxChange, price, currencyFormat }) {
                       id={`low-${item.name}`}
                       name={`low-${item.name}`}
                       value={item.lowPrice}
+                      disabled={!budgetBool}
                       onChange={e => handleCheckboxChange(e.target.value, e.target.checked)} />
                         {currencyFormat(item.lowPrice)}
                       </td>
@@ -75,13 +76,13 @@ function ItemsList({ handleCheckboxChange, price, currencyFormat }) {
                       id={`high-${item.name}`}
                       name={`high-${item.name}`}
                       value={item.highPrice}
+                      disabled={!budgetBool}
                       onChange={e => handleCheckboxChange(e.target.value, e.target.checked)} />
                         {currencyFormat(item.highPrice)}
                       </td>
                     </tr>)
                 }
             </table>
-            <h2>{currencyFormat(price)}</h2>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const Budget = ({ assignBudget }) => {
         <form>
             <div className="form-control">
                 <label>What is your budget for this project?</label>
-                <span className="currencyInput">$ <input type='text' onChange={e => assignBudget(e.target.value)} placeholder="Enter your budget" /></span>
+                <span className="currencyInput">$ <input type='text' onChange={e => assignBudget(e.target.value, e.code, e)} placeholder="Enter your budget" /></span>
             </div>
         </form>
     )

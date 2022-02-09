@@ -8,6 +8,10 @@ body {
   background: darkgoldenrod;
 }
 
+.show { display: inherit; }
+
+.hide { display: none; }
+
 /* app */
 .container {
   display: flex;
@@ -32,7 +36,29 @@ body {
 }
 
 
+/* Items list component */
+.disable-checkboxes--true { color: grey; }
+
+.disable-checkboxes--false { color: black; }
+
+.items-list__wrapper {
+  padding-top: 20px;
+}
+
+.items-list {
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* budget bar component */
+
+.budget-cost-display__wrapper {
+  width: 80%;
+  min-width: 100px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
 .budget-bar__wrapper {
   height: 20px;
   width: 100%;
@@ -41,14 +67,16 @@ body {
   margin-top: 20px;
 }
 
-
 .budget-bar-total {
   height: 100%;
   background-color: #333;
   border-radius: inherit;
+  max-width: 100%;
   text-align: right;
   transition: width 1s ease-in-out;
   }
+
+.budget-bar-total.over-budget {  background: red; }
 
 .budget-bar-progress  {
   padding: 5px;
