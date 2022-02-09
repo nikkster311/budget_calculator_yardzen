@@ -1,5 +1,10 @@
 ### Yardzen Budget Calculator
 
+To run this app locally:
+-clone the repository
+-run 'npm start' or `yarn start`
+-Open [http://localhost:3000](http://localhost:3000) to view it in your browser. 
+
 ## Thought process
 While building this calculator, my main goals were to:
 
